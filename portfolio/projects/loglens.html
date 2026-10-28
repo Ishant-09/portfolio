@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LogLens // Project 01 — Ishant Phadatare</title>
+  <meta name="description" content="LogLens: A Python project exploring structured log inspection, tokenization, and CLI diagnostics.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <!-- Ambient Energy Field -->
+  <div class="energy-field-container" aria-hidden="true">
+    <div class="energy-auras">
+      <div class="energy-aura aura-lime"></div>
+      <div class="energy-aura aura-cyan"></div>
+    </div>
+    <div class="energy-grid-drift"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="../index.html#projects" class="site-logo">
+        <span class="accent mono">&lt;</span> BACK TO LAB // ISHANT.EXE
+      </a>
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        <span>STATUS: IN DEVELOPMENT</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article class="case-study-hero">
+      <div class="container">
+        
+        <div class="breadcrumb">
+          <a href="../index.html">HOME</a>
+          <span>/</span>
+          <a href="../index.html#projects">PROJECTS</a>
+          <span>/</span>
+          <span class="accent">LOGLENS</span>
+        </div>
+
+        <span class="section-label">PROJECT 01 // PYTHON CLI UTILITY</span>
+        <h1 class="hero-title" style="margin-top: 12px; margin-bottom: 8px;">LogLens</h1>
+        <p class="section-subtitle">
+          Exploring memory-efficient log streaming, regex token extraction, and CLI diagnostics in Python.
+        </p>
+
+        <div class="case-study-grid">
+          
+          <div class="case-study-main">
+            <section class="case-study-section">
+              <h3>Problem &amp; Motivation</h3>
+              <p>
+                When debugging backend servers or local network daemons, raw logs arrive as dense, unformatted walls of text. Grepping through gigabytes of logs often leads to cognitive fatigue or slow system responses when reading large files directly into memory.
+              </p>
+              <p>
+                LogLens started as an exercise in Python fundamentals: how to efficiently stream files line-by-line using generators, parse varied timestamp formats, detect anomalous spikes, and output structured, human-readable data on the terminal.
+              </p>
+            </section>
+
+            <section class="case-study-section">
+              <h3>Technical Architecture</h3>
+              <p>
+                The project focuses on three distinct layers:
+              </p>
+              <ul style="padding-left: 20px; color: var(--text-secondary); margin-bottom: 16px; line-height: 1.8;">
+                <li><strong style="color: var(--text-primary);">Streaming Ingestion:</strong> Python generator expressions (`yield`) ensure the tool never loads entire multi-gigabyte log files into RAM at once.</li>
+                <li><strong style="color: var(--text-primary);">Configurable Tokenizer:</strong> Compiling regular expressions once (`re.compile`) to tokenize syslog, Apache/Nginx, and custom JSON log structures.</li>
+                <li><strong style="color: var(--text-primary);">Terminal Presentation:</strong> ANSI escape colorization for highlighting severity levels (`INFO`, `WARN`, `ERROR`, `FATAL`) with clean column alignment.</li>
+              </ul>
+
+              <div class="code-snippet">
+<pre># Conceptual core: Streaming line parser with generator
+import re
+from typing import Generator, Dict, Any
+
+LOG_PATTERN = re.compile(
+    r'^\[(?P&lt;timestamp&gt;.*?)\]\s+\[(?P&lt;level&gt;\w+)\]\s+(?P&lt;message&gt;.*)$'
+)
+
+def stream_and_parse(file_path: str) -> Generator[Dict[str, Any], None, None]:
+    with open(file_path, 'r', encoding='utf-8', errors='replace') as stream:
+        for line_num, line in enumerate(stream, start=1):
+            match = LOG_PATTERN.match(line.strip())
+            if match:
+                record = match.groupdict()
+                record['line'] = line_num
+                yield record</pre>
+              </div>
+            </section>
+
+            <section class="case-study-section">
+              <h3>What I Learned So Far</h3>
+              <p>
+                1. <strong>Memory Management in Python:</strong> Understanding the difference between `read()`, `readlines()`, and iterator-based streaming.
+              </p>
+              <p>
+                2. <strong>Regex Performance:</strong> Precompiling patterns and avoiding catastrophic backtracking when parsing malformed or truncated log lines.
+              </p>
+              <p>
+                3. <strong>Terminal UX:</strong> Designing clear CLI argument flags with Python's built-in `argparse` module.
+              </p>
+            </section>
+
+            <section class="case-study-section">
+              <h3>Current Status &amp; Next Steps</h3>
+              <p>
+                The core parsing logic is working in small local scripts. The next phase involves adding real-time file following (`tail -f` simulation) and JSON output formatting for piping into downstream tools.
+              </p>
+            </section>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="case-study-sidebar">
+            <div class="tech-spec-panel">
+              <div class="spec-header">
+                <span>PROJECT_SPECS</span>
+                <span class="accent mono">LOGLENS</span>
+              </div>
+              <div class="spec-body">
+                <div class="spec-row">
+                  <span class="spec-key">LANGUAGE</span>
+                  <span class="spec-val">Python 3.x</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">LIBRARIES</span>
+                  <span class="spec-val">Standard Library (re, argparse, sys)</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">CATEGORY</span>
+                  <span class="spec-val">Developer Tooling / CLI</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">DEV PHASE</span>
+                  <span class="spec-val active-tag">In Development</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">REPOSITORY</span>
+                  <span class="spec-val" style="color: var(--text-muted);">Local workspace (pre-release)</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="../index.html#projects" class="btn btn-secondary" style="width: 100%;">
+              &larr; Back to All Projects
+            </a>
+          </aside>
+
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-brand">ISHANT.EXE // DEVELOPER IN PROGRESS</span>
+      <span class="footer-note mono">exit 0</span>
+    </div>
+  </footer>
+
+</body>
+</html>

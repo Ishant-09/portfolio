@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ishant Phadatare — ISHANT.EXE | Developer in Progress</title>
+  <meta name="description" content="Personal digital workspace of Ishant Phadatare — First-year CS student exploring Python, AI, networks, Linux, and systems. Built with pure HTML and CSS.">
+  <meta name="author" content="Ishant Phadatare">
+  <meta name="theme-color" content="#080A09">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       AMBIENT INTERACTIVE ENERGY FIELD (Pure HTML5 & CSS3 - Zero JS)
+       ======================================================================== -->
+  <div class="energy-field-container" aria-hidden="true">
+    <div class="energy-auras">
+      <div class="energy-aura aura-lime"></div>
+      <div class="energy-aura aura-cyan"></div>
+      <div class="energy-aura aura-green"></div>
+    </div>
+    <div class="energy-grid-drift"></div>
+    <div class="energy-particles">
+      <span class="particle p-1"></span>
+      <span class="particle p-2"></span>
+      <span class="particle p-3"></span>
+      <span class="particle p-4"></span>
+      <span class="particle p-5"></span>
+      <span class="particle p-6"></span>
+      <span class="particle p-7"></span>
+      <span class="particle p-8"></span>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       SITE HEADER & NAVIGATION (Zero JS - Pure CSS Mobile Hamburger)
+       ======================================================================== -->
+  <header class="site-header">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Toggle Navigation Menu">
+    
+    <div class="container nav-container">
+      <a href="#hero" class="site-logo" aria-label="Ishant Phadatare Portfolio Home">
+        <span class="accent mono">&gt;_</span> ISHANT.EXE
+        <span class="logo-badge mono">v1.0</span>
+      </a>
+
+      <!-- Ambient System Nav Status Indicator -->
+      <div class="nav-sys-badge" aria-hidden="true">
+        <span class="status-dot"></span>
+        <span>SYS.STATUS // ONLINE</span>
+      </div>
+
+      <!-- Mobile Hamburger Trigger -->
+      <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#simulation" class="nav-link">Simulation</a></li>
+        <li><a href="#stack" class="nav-link">Stack</a></li>
+        <li><a href="#workbench" class="nav-link">Workbench</a></li>
+        <li><a href="#network" class="nav-link">Topology</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li>
+          <a href="#terminal" class="nav-term-btn">
+            <span class="accent">&gt;</span> CONSOLE
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         01. HERO SECTION
+         ====================================================================== -->
+    <section id="hero" class="hero-section section-wrapper">
+      
+      <!-- Interactive Mouse-Reactive Energy Matrix (Pure CSS Multi-Zone Grid) -->
+      <div class="hero-energy-zones" aria-hidden="true">
+        <div class="energy-zone zone-1"></div>
+        <div class="energy-zone zone-2"></div>
+        <div class="energy-zone zone-3"></div>
+        <div class="energy-zone zone-4"></div>
+        <div class="energy-zone zone-5"></div>
+        <div class="energy-zone zone-6"></div>
+      </div>
+
+      <div class="container hero-grid">
+        
+        <!-- Left Column: Personal Statement & Context -->
+        <div class="hero-content">
+          <div class="hero-meta">
+            <span class="section-label">INDEPENDENTLY CURIOUS. ACTIVELY BUILDING.</span>
+            <div class="status-pill">
+              <span class="status-dot"></span>
+              <span>1st Year B.Tech CS (AI &amp; ML)</span>
+            </div>
+          </div>
+
+          <h1 class="hero-title">Hi, I'm <span class="accent">Ishant</span>.</h1>
+          
+          <div class="hero-statement">
+            <span class="hero-tagline-cycle">I build. I break. I understand.</span>
+          </div>
+
+          <p class="hero-desc">
+            First-year Computer Science student exploring Python, artificial intelligence, computer networks, and the systems that power modern technology.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">Explore My Work</a>
+            <a href="#about" class="btn btn-secondary">Get To Know Me</a>
+            <a href="#terminal" class="btn btn-secondary mono">Launch Terminal &gt;_</a>
+          </div>
+
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <span>LOCATION / ENV</span>
+              <strong>macOS • Ghostty • Zsh</strong>
+            </div>
+            <div class="stat-item">
+              <span>PRIMARY FOCUS</span>
+              <strong>Python &amp; Systems Logic</strong>
+            </div>
+            <div class="stat-item">
+              <span>STATUS</span>
+              <strong class="accent">Actively Experimenting</strong>
+            </div>
+          </div>
+
+          <!-- Feature 3: Decorative Boot Sequence Component -->
+          <div class="boot-sequence-widget" aria-label="System Boot Sequence">
+            <div class="boot-header">
+              <div class="boot-title">
+                <span class="status-dot"></span>
+                <span>BOOT SEQUENCE // ISHANT.EXE</span>
+              </div>
+              <span class="boot-status-badge">INITIALIZED [0.42s]</span>
+            </div>
+            <div class="boot-progress-track">
+              <div class="boot-progress-fill"></div>
+            </div>
+            <div class="boot-lines">
+              <div class="boot-line b-1"><span class="accent">[OK]</span> Developer profile loaded (B.Tech CS Y1)</div>
+              <div class="boot-line b-2"><span class="accent">[OK]</span> Project directory indexed (~/projects/)</div>
+              <div class="boot-line b-3"><span class="accent">[OK]</span> Technical interests mapped (Python, CV, Networks, Linux)</div>
+              <div class="boot-line b-4"><span class="accent">[OK]</span> Engineering workspace ready (Ghostty + Zsh)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Pure CSS Animated Living System Diagram -->
+        <div class="hero-visual">
+          <div class="system-diagram-wrapper" aria-label="System Topology Visualizer">
+            <div class="diagram-canvas">
+              
+              <!-- Canvas Header Bar -->
+              <div class="diagram-header-bar">
+                <span>SYSTEM_TOPOLOGY // LIVE</span>
+                <span class="diagram-status-badge">ONLINE</span>
+              </div>
+
+              <!-- Animated Orbital Rings -->
+              <div class="orbit-ring orbit-ring-1"></div>
+              <div class="orbit-ring orbit-ring-2"></div>
+              <div class="radar-ping"></div>
+
+              <!-- Center Hub -->
+              <div class="center-node">
+                <span class="center-node-label">ISHANT</span>
+                <span class="center-node-sub">CS // Y1</span>
+              </div>
+
+              <!-- Satellite Nodes -->
+              <a href="#stack" class="sat-node sat-python" title="View Python stack">
+                <span class="sat-dot"></span>
+                <span>PYTHON</span>
+              </a>
+
+              <a href="#stack" class="sat-node sat-networks" title="View Networking stack">
+                <span class="sat-dot"></span>
+                <span>NETWORKS</span>
+              </a>
+
+              <a href="#stack" class="sat-node sat-aicv" title="View AI/CV stack">
+                <span class="sat-dot"></span>
+                <span>AI / CV</span>
+              </a>
+
+              <a href="#stack" class="sat-node sat-linux" title="View Linux stack">
+                <span class="sat-dot"></span>
+                <span>LINUX</span>
+              </a>
+
+              <a href="#stack" class="sat-node sat-hardware" title="View Hardware stack">
+                <span class="sat-dot"></span>
+                <span>HARDWARE</span>
+              </a>
+
+              <!-- Connecting Vector Lines (Pure SVG Overlay with Animated Data Pulses) -->
+              <svg class="diagram-vectors" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+                <!-- Base Topology Links -->
+                <line x1="240" y1="240" x2="240" y2="105" class="vector-line" />
+                <line x1="240" y1="240" x2="385" y2="190" class="vector-line" />
+                <line x1="240" y1="240" x2="365" y2="375" class="vector-line" />
+                <line x1="240" y1="240" x2="115" y2="375" class="vector-line" />
+                <line x1="240" y1="240" x2="95" y2="190" class="vector-line" />
+                
+                <!-- Animated Active Signal Stream Overlays -->
+                <line x1="240" y1="240" x2="240" y2="105" class="vector-line-active" />
+                <line x1="240" y1="240" x2="385" y2="190" class="vector-line-active" style="animation-delay: 1.5s;" />
+                <line x1="240" y1="240" x2="365" y2="375" class="vector-line-active" style="animation-delay: 3s;" />
+                <line x1="240" y1="240" x2="115" y2="375" class="vector-line-active" style="animation-delay: 4.5s;" />
+                <line x1="240" y1="240" x2="95" y2="190" class="vector-line-active" style="animation-delay: 6s;" />
+              </svg>
+
+              <!-- Feature 5: Diagram Telemetry Legend -->
+              <div class="diagram-legend" aria-hidden="true">
+                <div class="diagram-legend-item"><span class="legend-dot-lime"></span> SYS: NOMINAL</div>
+                <div class="diagram-legend-item"><span class="legend-dot-cyan"></span> LINK: ACTIVE</div>
+                <div class="diagram-legend-item mono">2.4GHz MESH</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         02. ABOUT SECTION
+         ====================================================================== -->
+    <section id="about" class="section-wrapper">
+      <div class="container">
+        
+        <div class="section-header">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+            <span class="section-label" style="margin-bottom: 0;">// 01. ORIGIN &amp; METHODOLOGY</span>
+            <span class="sys-chip">LOC: 0x01_ORIGIN</span>
+          </div>
+          <h2 class="section-title">Curiosity is my starting point.</h2>
+          <p class="section-subtitle">
+            An honest perspective from someone at the starting gate of computer science.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left Column: Story & Principles -->
+          <div class="about-narrative">
+            <p class="lead-p">
+              I'm a first-year Computer Science student interested in understanding technology beyond the surface. From writing Python scripts to exploring networks, Linux, computer vision, and embedded systems, I enjoy experimenting with ideas and learning how different pieces fit together.
+            </p>
+            <p>
+              I use a MacBook and enjoy customizing my development environment—exploring terminal workflows, Ghostty, Zsh, Starship, and TMUX. Rather than just learning commands by rote, I want to understand what the kernel, sockets, and memory are doing under the hood.
+            </p>
+            <p>
+              I'm still early in my journey, which means I have a lot to explore, a lot to build, and plenty of room to improve. I want this website to grow alongside me as a living lab notebook of my engineering path.
+            </p>
+
+            <!-- Three Core Principles -->
+            <div class="principles-list">
+              <div class="principle-card">
+                <span class="principle-num">PRINCIPLE 01</span>
+                <h3 class="principle-title">Understand the system.</h3>
+                <p class="principle-desc">Learn why something works, not just which command to run or which library to import.</p>
+              </div>
+
+              <div class="principle-card">
+                <span class="principle-num">PRINCIPLE 02</span>
+                <h3 class="principle-title">Build to learn.</h3>
+                <p class="principle-desc">Turn abstract classroom concepts into working experiments and tangible code.</p>
+              </div>
+
+              <div class="principle-card">
+                <span class="principle-num">PRINCIPLE 03</span>
+                <h3 class="principle-title">Stay curious.</h3>
+                <p class="principle-desc">Explore unfamiliar technologies, examine raw network traffic, and follow interesting technical questions.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Personal Technical Spec Panel -->
+          <div class="about-spec-col">
+            <div class="tech-spec-panel">
+              <div class="spec-header">
+                <span>DEVELOPER_PROFILE.SYS</span>
+                <span class="accent mono">READ_ONLY</span>
+              </div>
+              <div class="spec-body">
+                <div class="spec-row">
+                  <span class="spec-key">IDENTITY</span>
+                  <span class="spec-val">Ishant Phadatare</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">EDUCATION</span>
+                  <span class="spec-val">B.Tech Computer Science (1st Year)</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">SPECIALIZATION</span>
+                  <span class="spec-val">Artificial Intelligence &amp; ML</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">DEV ENVIRONMENT</span>
+                  <span class="spec-val">macOS • Ghostty • Zsh • TMUX</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">CORE LANGUAGE</span>
+                  <span class="spec-val active-tag">Python (Learning / Scripting)</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">AREAS OF STUDY</span>
+                  <span class="spec-val">Computer Networks, Linux, CV, Embedded</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">STATUS</span>
+                  <span class="spec-val active-tag">Active Student &amp; Builder</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">PHILOSOPHY</span>
+                  <span class="spec-val">"Curiosity in. Code out."</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         03. PROJECT SHOWCASE ("Things I've been building")
+         ====================================================================== -->
+    <section id="projects" class="section-wrapper">
+      <div class="container">
+        
+        <div class="section-header">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+            <span class="section-label" style="margin-bottom: 0;">// 02. LABORATORY WORK</span>
+            <span class="sys-chip">LOC: 0x02_LABS</span>
+          </div>
+          <h2 class="section-title">Things I've been building.</h2>
+          <p class="section-subtitle">
+            An engineering portfolio of projects explored, active prototypes, and research concepts. No invented metrics or inflated claims.
+          </p>
+        </div>
+
+        <!-- Feature 4: Developer Project Directory (~/projects/) -->
+        <div class="project-directory-wrapper">
+          <div class="project-directory-card">
+            <div class="dir-header-bar">
+              <span class="dir-path">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                ~/projects/
+              </span>
+              <span class="mono">4 ITEMS // INDEXED</span>
+            </div>
+            <div class="dir-table">
+              <a href="#proj-01" class="dir-row">
+                <div class="dir-name-col">
+                  <svg class="dir-folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                  <span>LogLens/</span>
+                </div>
+                <span class="dir-perm">drwxr-xr-x</span>
+                <span class="dir-lang">Python // CLI</span>
+                <span class="proj-status status-dev">IN DEVELOPMENT</span>
+                <span class="dir-arrow">&rarr;</span>
+              </a>
+              <a href="#proj-02" class="dir-row">
+                <div class="dir-name-col">
+                  <svg class="dir-folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                  <span>GestureOS/</span>
+                </div>
+                <span class="dir-perm">drwxr-xr-x</span>
+                <span class="dir-lang">Python // OpenCV</span>
+                <span class="proj-status status-explore">EXPLORATION</span>
+                <span class="dir-arrow">&rarr;</span>
+              </a>
+              <a href="#proj-03" class="dir-row">
+                <div class="dir-name-col">
+                  <svg class="dir-folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                  <span>Argus/</span>
+                </div>
+                <span class="dir-perm">drwxr-xr-x</span>
+                <span class="dir-lang">CV // ESP32</span>
+                <span class="proj-status status-concept">CONCEPT / PLANNED</span>
+                <span class="dir-arrow">&rarr;</span>
+              </a>
+              <a href="#proj-04" class="dir-row">
+                <div class="dir-name-col">
+                  <svg class="dir-folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                  <span>GuildUp/</span>
+                </div>
+                <span class="dir-perm">drwxr-xr-x</span>
+                <span class="dir-lang">Web Architecture</span>
+                <span class="proj-status status-explore">EXPLORATION</span>
+                <span class="dir-arrow">&rarr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- PROJECT 01: LOGLENS -->
+          <article id="proj-01" class="project-card">
+            <div class="project-card-header">
+              <div class="proj-meta">
+                <span class="proj-num">01</span>
+                <span class="proj-status status-dev">IN DEVELOPMENT</span>
+              </div>
+              <span class="mono accent" style="font-size: 0.75rem;">PYTHON // CLI</span>
+            </div>
+
+            <!-- Pure CSS Visual Preview: Terminal Log Stream -->
+            <div class="project-preview" aria-hidden="true">
+              <div class="preview-loglens">
+                <div class="log-line"><span class="log-time">[11:24:02]</span> <span class="log-info">[INFO]</span> <span class="log-msg">Streaming daemon initialized</span></div>
+                <div class="log-line"><span class="log-time">[11:24:05]</span> <span class="log-warn">[WARN]</span> <span class="log-msg">High latency detected: <span class="log-highlight">412ms</span></span></div>
+                <div class="log-line"><span class="log-time">[11:24:09]</span> <span class="log-err">[ERR]</span> <span class="log-msg">Socket closed unexpectedly: port 8080</span></div>
+                <div class="log-line"><span class="log-time">[11:24:12]</span> <span class="log-info">[INFO]</span> <span class="log-msg">LogLens parser extracted 24 structured tokens</span></div>
+              </div>
+            </div>
+
+            <div class="project-card-body">
+              <h3 class="project-title">LogLens</h3>
+              <p class="project-summary">
+                A Python project exploring how log files can be parsed, inspected, and understood more effectively through structured CLI processing.
+              </p>
+              
+              <div class="project-tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">File Handling</span>
+                <span class="tech-tag">Regex / Parsing</span>
+                <span class="tech-tag">Data Structures</span>
+              </div>
+
+              <!-- Pure CSS Expandable Deep Dive -->
+              <details class="project-deep-dive">
+                <summary>EXPLORE LAB NOTES</summary>
+                <div class="deep-dive-content">
+                  <div class="deep-dive-section">
+                    <h5>The Problem</h5>
+                    <p>Raw server logs are noisy and overwhelming to read line-by-line during incident debugging or system analysis.</p>
+                  </div>
+                  <div class="deep-dive-section">
+                    <h5>Technical Approach</h5>
+                    <p>Building a lightweight Python tool utilizing streaming generators for memory-efficient log reading, regex pattern matching, and structured JSON output.</p>
+                  </div>
+                  <div class="deep-dive-section">
+                    <h5>What I'm Learning</h5>
+                    <p>Python file I/O performance, handling edge cases in malformed logs, and structuring clean CLI developer utilities.</p>
+                  </div>
+                  <div class="project-links">
+                    <a href="projects/loglens.html" class="proj-link accent">Full Case Study &rarr;</a>
+                    <span class="proj-link mono" style="color: var(--text-muted);">Repo: Coming soon</span>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </article>
+
+          <!-- PROJECT 02: GESTUREOS -->
+          <article id="proj-02" class="project-card">
+            <div class="project-card-header">
+              <div class="proj-meta">
+                <span class="proj-num">02</span>
+                <span class="proj-status status-explore">EXPLORATION</span>
+              </div>
+              <span class="mono cyan" style="font-size: 0.75rem;">CV // INTERACTION</span>
+            </div>
+
+            <!-- Pure CSS Visual Preview: Hand Tracking Viewport -->
+            <div class="project-preview" aria-hidden="true">
+              <div class="preview-gestureos">
+                <div class="gesture-hud">TRACKING: 21 LANDMARKS // FPS: 30</div>
+                <div class="gesture-box">
+                  <span class="hand-point hp-1"></span>
+                  <span class="hand-point hp-2"></span>
+                  <span class="hand-point hp-3"></span>
+                  <span class="hand-point hp-4"></span>
+                  <span class="hand-point hp-5"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card-body">
+              <h3 class="project-title">GestureOS</h3>
+              <p class="project-summary">
+                An experimental concept exploring computer control and spatial input through hand gestures using computer vision pipelines.
+              </p>
+              
+              <div class="project-tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">OpenCV</span>
+                <span class="tech-tag">MediaPipe</span>
+                <span class="tech-tag">Human-Computer Interaction</span>
+              </div>
+
+              <!-- Pure CSS Expandable Deep Dive -->
+              <details class="project-deep-dive">
+                <summary>EXPLORE LAB NOTES</summary>
+                <div class="deep-dive-content">
+                  <div class="deep-dive-section">
+                    <h5>The Concept</h5>
+                    <p>Replacing mouse and keyboard shortcuts with intuitive spatial hand gestures detected via standard webcams.</p>
+                  </div>
+                  <div class="deep-dive-section">
+                    <h5>Technical Approach</h5>
+                    <p>Using MediaPipe Hands landmark tracking to extract 3D finger coordinates, calculate Euclidean distances, and trigger simulated OS virtual inputs.</p>
+                  </div>
+                  <div class="deep-dive-section">
+                    <h5>What I'm Learning</h5>
+                    <p>Real-time frame processing constraints, smoothing jitter in landmark coordinates, and computer vision mathematics.</p>
+                  </div>
+                  <div class="project-links">
+                    <a href="projects/gestureos.html" class="proj-link cyan">Full Case Study &rarr;</a>
+                    <span class="proj-link mono" style="color: var(--text-muted);">Status: Prototype phase</span>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </article>
+
+          <!-- PROJECT 03: ARGUS -->
+          <article id="proj-03" class="project-card">
+            <div class="project-card-header">
+              <div class="proj-meta">
+                <span class="proj-num">03</span>
+                <span class="proj-status status-concept">CONCEPT / PLANNED</span>
+              </div>
+              <span class="mono amber" style="font-size: 0.75rem;">ROBOTICS // EMBEDDED</span>
+            </div>
+
+            <!-- Pure CSS Visual Preview: Overhead Arena Coordinates -->
+            <div class="project-preview" aria-hidden="true">
+              <div class="preview-argus">
+                <div class="arena-grid-overlay"></div>
+                <div class="robot-marker rm-1">#01</div>
+                <div class="robot-marker rm-2">#02</div>
+                <div class="gesture-hud" style="color: var(--accent-amber);">ARENA: 120cm x 80cm // OPTICAL TRACKING</div>
+              </div>
+            </div>
+
+            <div class="project-card-body">
+              <h3 class="project-title">Argus</h3>
+              <p class="project-summary">
+                An experimental robotics concept exploring how an overhead camera could track fiducial markers and coordinate small mobile robots.
+              </p>
+              
+              <div class="project-tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Computer Vision</span>
+                <span class="tech-tag">AprilTags</span>
+                <span class="tech-tag">ESP32</span>
+                <span class="tech-tag">Microcontrollers</span>
+              </div>
+
+              <!-- Pure CSS Expandable Deep Dive -->
+              <details class="project-deep-dive">
+                <summary>EXPLORE LAB NOTES</summary>
+                <div class="deep-dive-content">
+                  <div class="deep-dive-section">
+                    <h5>The Concept</h5>
+                    <p>Centralized optical tracking eliminates the need for expensive onboard sensors on individual miniature wheeled robots.</p>
+                  </div>
+                  <div class="deep-dive-section">
+                    <h5>Proposed Approach</h5>
+                    <p>Mounting an overhead camera running AprilTag detection in Python to calculate each robot's 2D position and orientation, then sending wireless motor adjustments over ESP-NOW or MQTT.</p>
+                  </div>
+                  <div class="deep-dive-section">
+                    <h5>What I'm Learning</h5>
+                    <p>Fiducial marker detection, perspective transformation calibration, and wireless telemetry to ESP32 microcontrollers.</p>
+                  </div>
+                  <div class="project-links">
+                    <a href="projects/argus.html" class="proj-link amber">Full Case Study &rarr;</a>
+                    <span class="proj-link mono" style="color: var(--text-muted);">Status: Research &amp; bill of materials</span>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </article>
+
+          <!-- PROJECT 04: GUILDUP -->
+          <article id="proj-04" class="project-card">
+            <div class="project-card-header">
+              <div class="proj-meta">
+                <span class="proj-num">04</span>
+                <span class="proj-status status-explore">EXPLORATION</span>
+              </div>
+              <span class="mono accent" style="font-size: 0.75rem;">WEB ARCHITECTURE // COMMUNITY</span>
+            </div>
+
+            <!-- Pure CSS Visual Preview: Quest Board -->
+            <div class="project-preview" aria-hidden="true">
+              <div class="preview-guildup">
+                <div class="guildup-quest-row">
+                  <span>WEEKLY QUEST: Linux Permissions</span>
+                  <span class="quest-badge">85% DONE</span>
+                </div>
+                <div class="quest-progress-bar">
+                  <div class="quest-progress-fill" style="width: 85%;"></div>
+                </div>
+                <div class="guildup-quest-row">
+                  <span>SQUAD: Python Scripting Circle</span>
+                  <span class="mono" style="color: var(--text-muted);">4 MEMBERS</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card-body">
+              <h3 class="project-title">GuildUp</h3>
+              <p class="project-summary">
+                A collaborative learning platform concept built around shared technical goals, weekly coding quests, and peer learning accountability.
+              </p>
+              
+              <div class="project-tech-tags">
+                <span class="tech-tag">System Design</span>
+                <span class="tech-tag">Information Architecture</span>
+                <span class="tech-tag">Web Protocols</span>
+                <span class="tech-tag">Peer Learning</span>
+              </div>
+
+              <!-- Pure CSS Expandable Deep Dive -->
+              <details class="project-deep-dive">
+                <summary>EXPLORE LAB NOTES</summary>
+                <div class="deep-dive-content">
+                  <div class="deep-dive-section">
+                    <h5>The Concept</h5>
+                    <p>Self-learning technical topics is notoriously prone to drop-off. GuildUp explores structuring student accountability into lightweight weekly quests.</p>
+                  </div>
+                  <div class="deep-dive-section">
+                    <h5>Proposed Architecture</h5>
+                    <p>Designing a modular web architecture focusing on minimal distractions, structured submission proofs, and peer validation loops.</p>
+                  </div>
+                  <div class="deep-dive-section">
+                    <h5>What I'm Learning</h5>
+                    <p>Client-server interaction models, database relational modeling, and user journey optimization for learning habits.</p>
+                  </div>
+                  <div class="project-links">
+                    <a href="projects/guildup.html" class="proj-link accent">Full Case Study &rarr;</a>
+                    <span class="proj-link mono" style="color: var(--text-muted);">Status: Concept &amp; Wireframes</span>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         FEATURE 1: MATRIX-STYLE DIGITAL RAIN (SYSTEM BREACH // SIMULATION)
+         ====================================================================== -->
+    <section id="simulation" class="section-wrapper matrix-simulation-section">
+      <div class="container">
+        <div class="section-header">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+            <span class="section-label" style="margin-bottom: 0;">CSS-DRIVEN VISUALIZATION</span>
+            <span class="sys-chip">LOC: 0x03_STREAM</span>
+          </div>
+          <h2 class="section-title">System Breach // Simulation</h2>
+          <p class="section-subtitle">
+            A restrained CSS-only telemetry stream simulating network packet inspection, hexadecimal memory buffers, and system traces.
+          </p>
+        </div>
+
+        <div class="matrix-simulation-card">
+          <div class="matrix-hud-bar">
+            <span>BUFFER: STREAMING // 16 CHANNELS</span>
+            <span class="accent mono">CIPHER: HEX/DEC MATRIX</span>
+          </div>
+          
+          <div class="matrix-rain-viewport" aria-hidden="true">
+            <div class="matrix-scanlines"></div>
+            <!-- 16 Columns of predefined falling characters -->
+            <div class="matrix-col col-1"><span class="m-head">0x7F</span><span class="m-bright">101</span><span class="m-mid">λ</span><span class="m-dim">NULL</span><span class="m-mid">TCP</span><span class="m-dim">00</span><span class="m-mid">8080</span><span class="m-dim">ACK</span></div>
+            <div class="matrix-col col-2"><span class="m-head">0xA4</span><span class="m-bright">SYN</span><span class="m-mid">010</span><span class="m-dim">0xFF</span><span class="m-mid">ESP32</span><span class="m-dim">11</span><span class="m-mid">443</span><span class="m-dim">SEQ</span></div>
+            <div class="matrix-col col-3"><span class="m-head">0x12</span><span class="m-bright">PY</span><span class="m-mid">110</span><span class="m-dim">0x00</span><span class="m-mid">SOCKET</span><span class="m-dim">01</span><span class="m-mid">UDP</span><span class="m-dim">FIN</span></div>
+            <div class="matrix-col col-4"><span class="m-head">0xBE</span><span class="m-bright">NET</span><span class="m-mid">001</span><span class="m-dim">0x3C</span><span class="m-mid">ETH0</span><span class="m-dim">10</span><span class="m-mid">53</span><span class="m-dim">DNS</span></div>
+            <div class="matrix-col col-5"><span class="m-head">0xC0</span><span class="m-bright">LIN</span><span class="m-mid">111</span><span class="m-dim">0x8A</span><span class="m-mid">KRNL</span><span class="m-dim">00</span><span class="m-mid">SSH</span><span class="m-dim">22</span></div>
+            <div class="matrix-col col-6"><span class="m-head">0x4D</span><span class="m-bright">DEV</span><span class="m-mid">100</span><span class="m-dim">0x1E</span><span class="m-mid">GHOST</span><span class="m-dim">11</span><span class="m-mid">ZSH</span><span class="m-dim">TMUX</span></div>
+            <div class="matrix-col col-7"><span class="m-head">0x99</span><span class="m-bright">CV</span><span class="m-mid">011</span><span class="m-dim">0x5F</span><span class="m-mid">FRAME</span><span class="m-dim">01</span><span class="m-mid">LAND</span><span class="m-dim">MARK</span></div>
+            <div class="matrix-col col-8"><span class="m-head">0x01</span><span class="m-bright">APR</span><span class="m-mid">000</span><span class="m-dim">0x7B</span><span class="m-mid">TAG</span><span class="m-dim">10</span><span class="m-mid">ROBOT</span><span class="m-dim">POS</span></div>
+            <div class="matrix-col col-9"><span class="m-head">0xFA</span><span class="m-bright">LOG</span><span class="m-mid">101</span><span class="m-dim">0x9C</span><span class="m-mid">LENS</span><span class="m-dim">00</span><span class="m-mid">REGEX</span><span class="m-dim">PARS</span></div>
+            <div class="matrix-col col-10"><span class="m-head">0x33</span><span class="m-bright">GUI</span><span class="m-mid">110</span><span class="m-dim">0x4D</span><span class="m-mid">LDUP</span><span class="m-dim">11</span><span class="m-mid">QUEST</span><span class="m-dim">SYNC</span></div>
+            <div class="matrix-col col-11"><span class="m-head">0x88</span><span class="m-bright">011</span><span class="m-mid">0x1A</span><span class="m-dim">BYTE</span><span class="m-mid">STREAM</span><span class="m-dim">01</span><span class="m-mid">0xCC</span><span class="m-dim">EOF</span></div>
+            <div class="matrix-col col-12"><span class="m-head">0x2B</span><span class="m-bright">TCP</span><span class="m-mid">100</span><span class="m-dim">0x6E</span><span class="m-mid">PORT</span><span class="m-dim">10</span><span class="m-mid">9000</span><span class="m-dim">INIT</span></div>
+            <div class="matrix-col col-13"><span class="m-head">0xDE</span><span class="m-bright">SYS</span><span class="m-mid">010</span><span class="m-dim">0x2F</span><span class="m-mid">CALL</span><span class="m-dim">00</span><span class="m-mid">FORK</span><span class="m-dim">EXEC</span></div>
+            <div class="matrix-col col-14"><span class="m-head">0x55</span><span class="m-bright">MEM</span><span class="m-mid">111</span><span class="m-dim">0x8B</span><span class="m-mid">ALLOC</span><span class="m-dim">11</span><span class="m-mid">HEAP</span><span class="m-dim">STK</span></div>
+            <div class="matrix-col col-15"><span class="m-head">0x1A</span><span class="m-bright">NET</span><span class="m-mid">001</span><span class="m-dim">0x4E</span><span class="m-mid">WIRESH</span><span class="m-dim">01</span><span class="m-mid">PCAP</span><span class="m-dim">READ</span></div>
+            <div class="matrix-col col-16"><span class="m-head">0xEE</span><span class="m-bright">MAC</span><span class="m-mid">101</span><span class="m-dim">0x7A</span><span class="m-mid">OSX</span><span class="m-dim">10</span><span class="m-mid">UNIX</span><span class="m-dim">OK</span></div>
+          </div>
+
+          <div class="matrix-legend-overlay">
+            <span>DECODE_STATUS: ACTIVE</span>
+            <span class="accent">ALL STREAMS CONTAINED // NO EXTERNAL SCRIPTING</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         04. TECH STACK & LEARNING MAP
+         ====================================================================== -->
+    <section id="stack" class="section-wrapper">
+      <div class="container">
+        
+        <div class="section-header">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+            <span class="section-label" style="margin-bottom: 0;">// 03. TECHNICAL CAPABILITIES</span>
+            <span class="sys-chip">LOC: 0x04_STACK</span>
+          </div>
+          <h2 class="section-title">My current toolkit.</h2>
+          <p class="section-subtitle">
+            An honest representation of technologies I use or am actively studying. No fabricated proficiency bars.
+          </p>
+        </div>
+
+        <div class="stack-grid">
+          
+          <!-- Category 1: Programming -->
+          <div class="stack-category-card">
+            <div class="stack-cat-header">
+              <span class="stack-cat-title">Programming</span>
+              <span class="stack-cat-icon">01</span>
+            </div>
+            <div class="stack-items-list">
+              <div class="stack-item">
+                <span class="stack-item-name">Python</span>
+                <span class="stack-badge badge-learning">LEARNING / ACTIVE</span>
+              </div>
+              <div class="stack-item">
+                <span class="stack-item-name">C Basics</span>
+                <span class="stack-badge badge-exploring">EXPLORING (ACADEMIC)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: AI & Computer Vision -->
+          <div class="stack-category-card">
+            <div class="stack-cat-header">
+              <span class="stack-cat-title">AI &amp; Computer Vision</span>
+              <span class="stack-cat-icon">02</span>
+            </div>
+            <div class="stack-items-list">
+              <div class="stack-item">
+                <span class="stack-item-name">AI / ML Fundamentals</span>
+                <span class="stack-badge badge-learning">LEARNING</span>
+              </div>
+              <div class="stack-item">
+                <span class="stack-item-name">OpenCV</span>
+                <span class="stack-badge badge-experimenting">EXPERIMENTING</span>
+              </div>
+              <div class="stack-item">
+                <span class="stack-item-name">MediaPipe</span>
+                <span class="stack-badge badge-exploring">EXPLORING</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Systems & Networking -->
+          <div class="stack-category-card">
+            <div class="stack-cat-header">
+              <span class="stack-cat-title">Systems &amp; Networks</span>
+              <span class="stack-cat-icon">03</span>
+            </div>
+            <div class="stack-items-list">
+              <div class="stack-item">
+                <span class="stack-item-name">Computer Networks (OSI/TCP)</span>
+                <span class="stack-badge badge-learning">LEARNING</span>
+              </div>
+              <div class="stack-item">
+                <span class="stack-item-name">Linux Fundamentals</span>
+                <span class="stack-badge badge-experimenting">EXPERIMENTING</span>
+              </div>
+              <div class="stack-item">
+                <span class="stack-item-name">Terminal (Ghostty / Zsh / TMUX)</span>
+                <span class="stack-badge badge-project">DAILY WORKFLOW</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4: Embedded Systems -->
+          <div class="stack-category-card">
+            <div class="stack-cat-header">
+              <span class="stack-cat-title">Embedded &amp; Hardware</span>
+              <span class="stack-cat-icon">04</span>
+            </div>
+            <div class="stack-items-list">
+              <div class="stack-item">
+                <span class="stack-item-name">ESP32 Microcontrollers</span>
+                <span class="stack-badge badge-exploring">EXPLORING</span>
+              </div>
+              <div class="stack-item">
+                <span class="stack-item-name">Hardware-Software Interfacing</span>
+                <span class="stack-badge badge-exploring">CONCEPT</span>
+              </div>
+              <div class="stack-item">
+                <span class="stack-item-name">Sensor Telemetry</span>
+                <span class="stack-badge badge-exploring">INTEREST</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 5: Web Development -->
+          <div class="stack-category-card">
+            <div class="stack-cat-header">
+              <span class="stack-cat-title">Web Fundamentals</span>
+              <span class="stack-cat-icon">05</span>
+            </div>
+            <div class="stack-items-list">
+              <div class="stack-item">
+                <span class="stack-item-name">HTML5 (Semantic)</span>
+                <span class="stack-badge badge-project">USED IN PORTFOLIO</span>
+              </div>
+              <div class="stack-item">
+                <span class="stack-item-name">CSS3 (Grid/Flex/Animation)</span>
+                <span class="stack-badge badge-project">USED IN PORTFOLIO</span>
+              </div>
+              <div class="stack-item">
+                <span class="stack-item-name">JavaScript (DOM / Events)</span>
+                <span class="stack-badge badge-exploring">ROADMAP</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 6: Developer Infrastructure -->
+          <div class="stack-category-card">
+            <div class="stack-cat-header">
+              <span class="stack-cat-title">Dev Infrastructure</span>
+              <span class="stack-cat-icon">06</span>
+            </div>
+            <div class="stack-items-list">
+              <div class="stack-item">
+                <span class="stack-item-name">Git &amp; GitHub</span>
+                <span class="stack-badge badge-project">USED IN WORKFLOW</span>
+              </div>
+              <div class="stack-item">
+                <span class="stack-item-name">Docker</span>
+                <span class="stack-badge badge-learning">LEARNING GOAL</span>
+              </div>
+              <div class="stack-item">
+                <span class="stack-item-name">Kubernetes</span>
+                <span class="stack-badge badge-exploring">FUTURE EXPLORATION</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         05. ENGINEERING WORKBENCH ("Currently on my workbench")
+         ====================================================================== -->
+    <section id="workbench" class="section-wrapper">
+      <div class="container">
+        
+        <div class="section-header">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+            <span class="section-label" style="margin-bottom: 0;">// 04. ACTIVE LAB LOG</span>
+            <span class="sys-chip">LOC: 0x05_LOGS</span>
+          </div>
+          <h2 class="section-title">Currently on my workbench.</h2>
+          <p class="section-subtitle">
+            An editable snapshot of my current technical focus areas, experiments, and engineering investigations.
+          </p>
+        </div>
+
+        <div class="workbench-container">
+          <div class="wb-header">
+            <span>WORKBENCH_LOG // ACTIVE_TASKS</span>
+            <span class="accent mono">5 ACTIVE RECORDS</span>
+          </div>
+          
+          <div class="wb-log-list">
+            
+            <div class="wb-item">
+              <span class="wb-id">WB-01</span>
+              <div class="wb-title">Python Problem Solving &amp; Logic</div>
+              <p class="wb-desc">Deepening core algorithmic intuition, understanding string and stream manipulations, and building clean data structure implementations.</p>
+              <div class="wb-meta">
+                <span class="wb-tag">LANG / ALGO</span>
+              </div>
+            </div>
+
+            <div class="wb-item">
+              <span class="wb-id">WB-02</span>
+              <div class="wb-title">Linux Internals &amp; Networking</div>
+              <p class="wb-desc">Investigating how Linux processes, file descriptors, and socket layers operate. Learning Wireshark packet capture analysis.</p>
+              <div class="wb-meta">
+                <span class="wb-tag">SYSTEMS / NET</span>
+              </div>
+            </div>
+
+            <div class="wb-item">
+              <span class="wb-id">WB-03</span>
+              <div class="wb-title">Computer Vision Pipelines</div>
+              <p class="wb-desc">Testing OpenCV image matrix operations and extracting spatial hand landmark coordinates with MediaPipe for GestureOS prototype.</p>
+              <div class="wb-meta">
+                <span class="wb-tag">CV / ML</span>
+              </div>
+            </div>
+
+            <div class="wb-item">
+              <span class="wb-id">WB-04</span>
+              <div class="wb-title">Software Deployment &amp; Containers</div>
+              <p class="wb-desc">Studying the fundamentals of containerization with Docker: understanding namespaces, cgroups, and repeatable environment builds.</p>
+              <div class="wb-meta">
+                <span class="wb-tag">DEVOPS / INFRA</span>
+              </div>
+            </div>
+
+            <div class="wb-item">
+              <span class="wb-id">WB-05</span>
+              <div class="wb-title">Microcontroller Hardware Interfacing</div>
+              <p class="wb-desc">Reading technical documentation for ESP32 boards, GPIO protocols (I2C, SPI), and wireless telemetry for the Argus robotics concept.</p>
+              <div class="wb-meta">
+                <span class="wb-tag">EMBEDDED / IOT</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         06. ADVANCED TERMINAL PANEL (ISHANT.EXE // SYSTEM CONSOLE)
+         ====================================================================== -->
+    <section id="terminal" class="section-wrapper terminal-section-wrapper">
+      <div class="container">
+        
+        <div class="section-header" style="text-align: center;">
+          <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 8px;">
+            <span class="section-label" style="margin-bottom: 0;">// 05. INTERACTIVE CLI</span>
+            <span class="sys-chip">LOC: 0x06_CONSOLE</span>
+          </div>
+          <h2 class="section-title">ISHANT.EXE // SYSTEM CONSOLE</h2>
+          <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">
+            An advanced terminal-inspired workstation console. Click commands below to inspect developer profiles, directories, and diagnostic logs.
+          </p>
+        </div>
+
+        <div class="terminal-window">
+          
+          <!-- Terminal Titlebar -->
+          <div class="terminal-titlebar">
+            <div class="terminal-controls">
+              <span class="term-dot dot-close"></span>
+              <span class="term-dot dot-min"></span>
+              <span class="term-dot dot-max"></span>
+            </div>
+            <div class="terminal-title">ishant@portfolio: ~/workspace</div>
+            <div class="terminal-meta-tag">GHOSTTY + ZSH [ONLINE]</div>
+          </div>
+
+          <!-- Hidden Pure-CSS Radio Controls for Terminal Commands -->
+          <input type="radio" name="term-cmd" id="radio-whoami" class="term-radio" checked>
+          <input type="radio" name="term-cmd" id="radio-projects" class="term-radio">
+          <input type="radio" name="term-cmd" id="radio-skills" class="term-radio">
+          <input type="radio" name="term-cmd" id="radio-interests" class="term-radio">
+          <input type="radio" name="term-cmd" id="radio-contact" class="term-radio">
+          <input type="radio" name="term-cmd" id="radio-help" class="term-radio">
+          <input type="radio" name="term-cmd" id="radio-clear" class="term-radio">
+
+          <!-- Command Selector Navigation Bar -->
+          <div class="terminal-cmd-bar">
+            <span class="term-cmd-label">SELECT COMMAND:</span>
+            <label for="radio-whoami" class="cmd-btn">whoami</label>
+            <label for="radio-projects" class="cmd-btn">projects</label>
+            <label for="radio-skills" class="cmd-btn">skills</label>
+            <label for="radio-interests" class="cmd-btn">interests</label>
+            <label for="radio-contact" class="cmd-btn">contact</label>
+            <label for="radio-help" class="cmd-btn">help</label>
+            <label for="radio-clear" class="cmd-btn">clear</label>
+          </div>
+
+          <!-- Terminal Output Canvas -->
+          <div class="terminal-screen">
+            
+            <!-- Output 1: whoami -->
+            <div id="output-whoami" class="term-output-block">
+              <!-- Feature 2: Initialization Sequence -->
+              <div style="padding-bottom: 12px; margin-bottom: 12px; border-bottom: 1px dashed var(--border-subtle); color: var(--text-muted); font-size: 0.8125rem;">
+                <p style="color: var(--accent-lime); font-weight: 700; margin-bottom: 4px;">INITIALIZING ISHANT.EXE</p>
+                <p><span class="accent">[OK]</span> Loading developer profile</p>
+                <p><span class="accent">[OK]</span> Mapping technical interests</p>
+                <p><span class="accent">[OK]</span> Indexing project directory</p>
+                <p><span class="accent">[OK]</span> Establishing system connection</p>
+                <p style="color: var(--text-primary); margin-top: 4px;"><span class="accent">[STATUS]</span> SYSTEM STATUS: ONLINE</p>
+              </div>
+
+              <div class="term-prompt-line">
+                <span class="term-user">ishant@portfolio</span>:<span class="term-path">~</span>$ <span class="term-cmd-text">whoami</span>
+                <span class="term-cursor"></span>
+              </div>
+              <div class="term-result">
+                <p><span class="term-highlight">Ishant Phadatare</span></p>
+                <p>First-year B.Tech Computer Science student specializing in AI &amp; ML.</p>
+                <p>Curious by default. Building to learn. Passionate about systems, networks, and low-level code.</p>
+                <p style="margin-top: 8px; color: var(--accent-lime);">&gt; "Understanding how things work under the hood rather than only how to use them."</p>
+              </div>
+            </div>
+
+            <!-- Output 2: projects -->
+            <div id="output-projects" class="term-output-block">
+              <div class="term-prompt-line">
+                <span class="term-user">ishant@macbook</span>:<span class="term-path">~/workspace</span>$ <span class="term-cmd-text">ls -la projects/</span>
+                <span class="term-cursor"></span>
+              </div>
+              <div class="term-result">
+                <table class="term-table">
+                  <tr>
+                    <td>LogLens/</td>
+                    <td>[Python] Structured log file inspector &amp; parsing CLI utility (In dev)</td>
+                  </tr>
+                  <tr>
+                    <td>GestureOS/</td>
+                    <td>[OpenCV/MediaPipe] Spatial hand gesture interaction pipeline (Exploration)</td>
+                  </tr>
+                  <tr>
+                    <td>Argus/</td>
+                    <td>[CV/AprilTags/ESP32] Multi-robot overhead camera coordinate tracker (Concept)</td>
+                  </tr>
+                  <tr>
+                    <td>GuildUp/</td>
+                    <td>[Web Arch] Peer learning community &amp; weekly quest platform (Exploration)</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+
+            <!-- Output 3: skills -->
+            <div id="output-skills" class="term-output-block">
+              <div class="term-prompt-line">
+                <span class="term-user">ishant@macbook</span>:<span class="term-path">~</span>$ <span class="term-cmd-text">cat stack.conf</span>
+                <span class="term-cursor"></span>
+              </div>
+              <div class="term-result">
+                <table class="term-table">
+                  <tr>
+                    <td>Programming</td>
+                    <td>Python (Active / Scripting), C (Foundational academic)</td>
+                  </tr>
+                  <tr>
+                    <td>AI &amp; Vision</td>
+                    <td>OpenCV, MediaPipe, ML foundational theory</td>
+                  </tr>
+                  <tr>
+                    <td>Systems</td>
+                    <td>Linux (Debian/Ubuntu/Arch exploration), TCP/IP, OSI Model, Sockets</td>
+                  </tr>
+                  <tr>
+                    <td>Workflow</td>
+                    <td>macOS, Ghostty terminal, Zsh, Starship, TMUX, Git/GitHub</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+
+            <!-- Output 4: interests -->
+            <div id="output-interests" class="term-output-block">
+              <div class="term-prompt-line">
+                <span class="term-user">ishant@macbook</span>:<span class="term-path">~</span>$ <span class="term-cmd-text">cat interests.txt</span>
+                <span class="term-cursor"></span>
+              </div>
+              <div class="term-result">
+                <p>• Python automation &amp; systems engineering</p>
+                <p>• Computer vision &amp; spatial perception</p>
+                <p>• Computer networks &amp; internet infrastructure protocols</p>
+                <p>• Cybersecurity, network packet analysis &amp; ethical hacking</p>
+                <p>• Linux internals &amp; developer terminal workflow optimization</p>
+                <p>• Embedded systems (ESP32) &amp; hardware-software integration</p>
+              </div>
+            </div>
+
+            <!-- Output 5: contact -->
+            <div id="output-contact" class="term-output-block">
+              <div class="term-prompt-line">
+                <span class="term-user">ishant@macbook</span>:<span class="term-path">~</span>$ <span class="term-cmd-text">ping -c 3 contact.me</span>
+                <span class="term-cursor"></span>
+              </div>
+              <div class="term-result">
+                <p>64 bytes from mailto: <span class="term-highlight">phadatareishant@gmail.com</span></p>
+                <p>64 bytes from github: <span class="term-highlight">github.com/ishant-phadatare</span></p>
+                <p>64 bytes from linkedin: <span class="term-highlight">linkedin.com/in/ishant-phadatare</span></p>
+                <p style="margin-top: 8px; color: var(--accent-lime);">0% packet loss — Ready for collaboration &amp; technical discussion.</p>
+              </div>
+            </div>
+
+            <!-- Output 6: help -->
+            <div id="output-help" class="term-output-block">
+              <div class="term-prompt-line">
+                <span class="term-user">ishant@macbook</span>:<span class="term-path">~</span>$ <span class="term-cmd-text">help</span>
+                <span class="term-cursor"></span>
+              </div>
+              <div class="term-result">
+                <p>Available commands in this pure CSS terminal emulator:</p>
+                <table class="term-table">
+                  <tr>
+                    <td>whoami</td>
+                    <td>Display developer identity and academic background</td>
+                  </tr>
+                  <tr>
+                    <td>projects</td>
+                    <td>List current project directory and statuses</td>
+                  </tr>
+                  <tr>
+                    <td>skills</td>
+                    <td>Show honest technology index and exploration areas</td>
+                  </tr>
+                  <tr>
+                    <td>interests</td>
+                    <td>Enumerate technical passions and curiosity areas</td>
+                  </tr>
+                  <tr>
+                    <td>contact</td>
+                    <td>Display verified transmission endpoints</td>
+                  </tr>
+                  <tr>
+                    <td>clear</td>
+                    <td>Simulate a cleared terminal screen</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+
+            <!-- Output 7: clear -->
+            <div id="output-clear" class="term-output-block">
+              <div class="term-prompt-line">
+                <span class="term-user">ishant@portfolio</span>:<span class="term-path">~</span>$ 
+                <span class="term-cursor"></span>
+              </div>
+              <div class="term-result" style="color: var(--text-dim); font-style: italic;">
+                [Screen buffer cleared. Select another command button above to inspect output.]
+              </div>
+            </div>
+
+            <!-- Feature 2: Expandable Terminal Diagnostics -->
+            <details class="term-diagnostic-expand">
+              <summary>EXPAND SYSTEM DIAGNOSTICS &amp; KERNEL LOGS</summary>
+              <div class="diagnostic-stream">
+                <div>[0.0001] darwin-kernel 24.1.0 (arm64): Mach-O binary loaded</div>
+                <div>[0.0014] pty /dev/ttys002 attached to session Ghostty-PID(34901)</div>
+                <div>[0.0028] zsh 5.9: loading ~/.zshrc (starship + tmux plugins)</div>
+                <div>[0.0042] memory map: 16384MB physical, 0 pages swapped</div>
+                <div>[0.0065] network route: en0 default gw 192.168.1.1 (MTU: 1500)</div>
+                <div>[0.0089] status: process isolation active, zero-script sandbox validated</div>
+              </div>
+            </details>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         07. INTERESTS NETWORK ("Everything connects")
+         ====================================================================== -->
+    <section id="network" class="section-wrapper">
+      <div class="container">
+        
+        <div class="section-header">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+            <span class="section-label" style="margin-bottom: 0;">// 06. ARCHITECTURAL TOPOLOGY</span>
+            <span class="sys-chip">LOC: 0x07_MESH</span>
+          </div>
+          <h2 class="section-title">Everything connects.</h2>
+          <p class="section-subtitle">
+            How disparate areas of computer science intersect and inform each other across my learning path.
+          </p>
+        </div>
+
+        <div class="network-map-wrapper">
+          <div class="network-nodes-grid">
+            
+            <div class="net-node-card" tabindex="0">
+              <div class="net-node-header">
+                <span class="net-node-title">Python</span>
+                <span class="net-node-conn">NUCLEUS</span>
+              </div>
+              <p>The core computational language connecting CLI tooling, data manipulation, vision models, and hardware automation scripts.</p>
+              <div class="net-bridges">
+                <span class="net-bridge-tag">&rarr; LogLens</span>
+                <span class="net-bridge-tag">&rarr; GestureOS</span>
+                <span class="net-bridge-tag">&rarr; Argus</span>
+              </div>
+            </div>
+
+            <div class="net-node-card" tabindex="0">
+              <div class="net-node-header">
+                <span class="net-node-title">Computer Vision</span>
+                <span class="net-node-conn">PERCEPTION</span>
+              </div>
+              <p>Translating visual sensor input into structured coordinate matrices to understand spatial environments and gestures.</p>
+              <div class="net-bridges">
+                <span class="net-bridge-tag">&rarr; OpenCV</span>
+                <span class="net-bridge-tag">&rarr; MediaPipe</span>
+                <span class="net-bridge-tag">&rarr; GestureOS</span>
+              </div>
+            </div>
+
+            <div class="net-node-card" tabindex="0">
+              <div class="net-node-header">
+                <span class="net-node-title">Computer Networks</span>
+                <span class="net-node-conn">TRANSPORT</span>
+              </div>
+              <p>Understanding sockets, TCP streams, packet routing, and OSI layers to connect distributed devices reliably.</p>
+              <div class="net-bridges">
+                <span class="net-bridge-tag">&rarr; Sockets</span>
+                <span class="net-bridge-tag">&rarr; Wireshark</span>
+                <span class="net-bridge-tag">&rarr; HTTP/DNS</span>
+              </div>
+            </div>
+
+            <div class="net-node-card" tabindex="0">
+              <div class="net-node-header">
+                <span class="net-node-title">Linux &amp; Terminals</span>
+                <span class="net-node-conn">FOUNDATION</span>
+              </div>
+              <p>The operating system substrate: file permissions, signals, shell pipelines, process management, and custom terminal environments.</p>
+              <div class="net-bridges">
+                <span class="net-bridge-tag">&rarr; Ghostty</span>
+                <span class="net-bridge-tag">&rarr; TMUX</span>
+                <span class="net-bridge-tag">&rarr; Zsh</span>
+              </div>
+            </div>
+
+            <div class="net-node-card" tabindex="0">
+              <div class="net-node-header">
+                <span class="net-node-title">Cybersecurity</span>
+                <span class="net-node-conn">DEFENSE</span>
+              </div>
+              <p>Learning how attackers exploit protocol ambiguities, memory flaws, and configuration oversights to build resilient systems.</p>
+              <div class="net-bridges">
+                <span class="net-bridge-tag">&rarr; Packet Analysis</span>
+                <span class="net-bridge-tag">&rarr; Hardening</span>
+              </div>
+            </div>
+
+            <div class="net-node-card" tabindex="0">
+              <div class="net-node-header">
+                <span class="net-node-title">Embedded Systems</span>
+                <span class="net-node-conn">SILICON</span>
+              </div>
+              <p>Where software touches physical reality: microcontrollers (ESP32), GPIO pins, motor PWM, and sensor telemetry.</p>
+              <div class="net-bridges">
+                <span class="net-bridge-tag">&rarr; ESP32</span>
+                <span class="net-bridge-tag">&rarr; Sensors</span>
+                <span class="net-bridge-tag">&rarr; Argus</span>
+              </div>
+            </div>
+
+            <div class="net-node-card" tabindex="0">
+              <div class="net-node-header">
+                <span class="net-node-title">Robotics</span>
+                <span class="net-node-conn">SYNTHESIS</span>
+              </div>
+              <p>Bringing together computer vision, spatial algorithms, embedded microcontrollers, and wireless coordination.</p>
+              <div class="net-bridges">
+                <span class="net-bridge-tag">&rarr; Optical Tracking</span>
+                <span class="net-bridge-tag">&rarr; Kinematics</span>
+              </div>
+            </div>
+
+            <div class="net-node-card" tabindex="0">
+              <div class="net-node-header">
+                <span class="net-node-title">Automation &amp; Tools</span>
+                <span class="net-node-conn">LEVERAGE</span>
+              </div>
+              <p>Writing scripts and configuring workflows that eliminate repetitive friction and accelerate technical experimentation.</p>
+              <div class="net-bridges">
+                <span class="net-bridge-tag">&rarr; Shell Scripts</span>
+                <span class="net-bridge-tag">&rarr; Git Hooks</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         08. CONTACT & FOOTER SECTION
+         ====================================================================== -->
+    <section id="contact" class="section-wrapper">
+      <div class="container">
+        
+        <div class="contact-grid">
+          
+          <div class="contact-left">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+              <span class="section-label" style="margin-bottom: 0;">// 07. TRANSMISSION</span>
+              <span class="sys-chip">LOC: 0x08_TRANS</span>
+            </div>
+            <h2 class="contact-headline">Let's build something interesting.</h2>
+            <p class="contact-copy">
+              I'm always interested in technology, unconventional ideas, and opportunities to learn by building. Whether you'd like to talk about Python, computer vision, networking, or interesting projects, feel free to reach out.
+            </p>
+            <div class="status-pill" style="margin-top: 10px;">
+              <span class="status-dot"></span>
+              <span>Open to learning discussions &amp; student collaborations</span>
+            </div>
+          </div>
+
+          <div class="contact-right">
+            <div class="contact-channels">
+              
+              <!-- Email Channel -->
+              <a href="mailto:phadatareishant@gmail.com" class="contact-card">
+                <div class="channel-info">
+                  <span class="channel-label">EMAIL TRANSMISSION</span>
+                  <span class="channel-val">phadatareishant@gmail.com</span>
+                </div>
+                <span class="channel-arrow">&rarr;</span>
+              </a>
+
+              <!-- GitHub Channel -->
+              <a href="https://github.com/ishant-phadatare" target="_blank" rel="noopener noreferrer" class="contact-card">
+                <div class="channel-info">
+                  <span class="channel-label">CODE REPOSITORY</span>
+                  <span class="channel-val">github.com/ishant-phadatare</span>
+                </div>
+                <span class="channel-arrow">&rarr;</span>
+              </a>
+
+              <!-- LinkedIn Channel -->
+              <a href="https://linkedin.com/in/ishant-phadatare" target="_blank" rel="noopener noreferrer" class="contact-card">
+                <div class="channel-info">
+                  <span class="channel-label">PROFESSIONAL NETWORK</span>
+                  <span class="channel-val">linkedin.com/in/ishant-phadatare</span>
+                </div>
+                <span class="channel-arrow">&rarr;</span>
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       SITE FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="footer-brand">ISHANT.EXE // DEVELOPER IN PROGRESS</span>
+        <span class="footer-note mono">exit 0 — see you around.</span>
+      </div>
+
+      <div class="footer-right">
+        <span class="mono" style="font-size: 0.75rem; color: var(--text-dim);">
+          Pure HTML5 + CSS3 (No JavaScript)
+        </span>
+        <a href="#hero" class="back-to-top">
+          <span>&uarr;</span> cd ~ &amp;&amp; exit 0
+        </a>
+      </div>
+
+      <!-- Feature 6: Ambient Footer Telemetry Strip -->
+      <div class="footer-telemetry-strip" aria-hidden="true">
+        <span>SYS.STATUS // ONLINE</span>
+        <span>MODE // BUILDING</span>
+        <span>ENVIRONMENT // macOS (Ghostty + Zsh)</span>
+        <span>FOCUS // PYTHON + SYSTEMS</span>
+        <span>INTERFACE // PURE HTML5 + CSS3</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

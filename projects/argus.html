@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Argus // Project 03 — Ishant Phadatare</title>
+  <meta name="description" content="Argus: An experimental robotics concept exploring overhead optical tracking and multi-robot coordination with AprilTags and ESP32.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <!-- Ambient Energy Field -->
+  <div class="energy-field-container" aria-hidden="true">
+    <div class="energy-auras">
+      <div class="energy-aura aura-lime"></div>
+      <div class="energy-aura aura-green"></div>
+    </div>
+    <div class="energy-grid-drift"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="../index.html#projects" class="site-logo">
+        <span class="accent mono">&lt;</span> BACK TO LAB // ISHANT.EXE
+      </a>
+      <div class="status-pill">
+        <span class="status-dot" style="background-color: var(--accent-amber); box-shadow: 0 0 8px var(--accent-amber);"></span>
+        <span>STATUS: CONCEPT / PLANNED</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article class="case-study-hero">
+      <div class="container">
+        
+        <div class="breadcrumb">
+          <a href="../index.html">HOME</a>
+          <span>/</span>
+          <a href="../index.html#projects">PROJECTS</a>
+          <span>/</span>
+          <span class="amber">ARGUS</span>
+        </div>
+
+        <span class="section-label" style="color: var(--accent-amber); border-color: rgba(232, 184, 90, 0.3); background-color: var(--accent-amber-dim);">PROJECT 03 // ROBOTICS &amp; OPTICAL TRACKING</span>
+        <h1 class="hero-title" style="margin-top: 12px; margin-bottom: 8px;">Argus</h1>
+        <p class="section-subtitle">
+          An architectural investigation into centralized overhead computer vision for coordinating miniature swarming mobile robots.
+        </p>
+
+        <div class="case-study-grid">
+          
+          <div class="case-study-main">
+            <section class="case-study-section">
+              <h3>Problem &amp; Motivation</h3>
+              <p>
+                In multi-robot research, equipping each miniature robot with lidar, stereo cameras, and inertial measurement units (IMUs) quickly drives up hardware cost, battery weight, and onboard computing requirements.
+              </p>
+              <p>
+                Argus investigates an alternative paradigm: centralized global perception. By mounting a single stationary camera above a defined arena, a host computer tracks high-contrast fiducial markers (AprilTags) on top of each robot, calculating their global coordinates and heading vectors with sub-centimeter accuracy.
+              </p>
+            </section>
+
+            <section class="case-study-section">
+              <h3>System Topology</h3>
+              <p>
+                The planned system consists of three interconnected layers:
+              </p>
+              <ul style="padding-left: 20px; color: var(--text-secondary); margin-bottom: 16px; line-height: 1.8;">
+                <li><strong style="color: var(--text-primary);">Overhead Vision Pipeline:</strong> A top-down camera capturing the arena. Software runs AprilTag detection to identify marker IDs, 2D position (X, Y), and orientation angle (&theta;).</li>
+                <li><strong style="color: var(--text-primary);">Central Motion Coordinator:</strong> A Python supervisory process that computes path trajectories, obstacle avoidance vectors, and differential drive motor speeds.</li>
+                <li><strong style="color: var(--text-primary);">Low-Power Robot Nodes:</strong> Small differential-drive chassis powered by ESP32 microcontrollers, receiving lightweight motor PWM packets over ESP-NOW or local Wi-Fi UDP sockets.</li>
+              </ul>
+
+              <div class="code-snippet">
+<pre># Conceptual system loop (Supervisory Coordinator)
+# 1. Capture overhead frame
+# 2. Detect AprilTag poses: tags = apriltag_detector.detect(frame)
+# 3. For each robot tag:
+#      current_pos = (tag.center_x, tag.center_y)
+#      target_pos = waypoint_queue[tag.id]
+#      error_angle = compute_heading_error(current_pos, target_pos, tag.orientation)
+# 4. Transmit corrective motor speed vector over UDP/ESP-NOW</pre>
+              </div>
+            </section>
+
+            <section class="case-study-section">
+              <h3>Exploration Roadmap &amp; Research Goals</h3>
+              <p>
+                1. <strong>Perspective Transformation:</strong> Calibrating the camera matrix to eliminate lens barrel distortion and skew when mapping pixel coordinates to millimeter ground distances.
+              </p>
+              <p>
+                2. <strong>Low-Latency Wireless Control:</strong> Testing transmission intervals using ESP-NOW (a peer-to-peer protocol developed by Espressif) to achieve sub-10ms packet delivery without router overhead.
+              </p>
+              <p>
+                3. <strong>Hardware Assembly:</strong> Evaluating micro gearmotors, motor drivers (L298N vs. DRV8833), and 3.7V LiPo power regulation.
+              </p>
+            </section>
+
+            <section class="case-study-section">
+              <h3>Current Status</h3>
+              <p>
+                Argus is currently in the conceptual design and component planning stage. No physical robots have been finalized yet; the exploration is focused on simulating the tracking mathematics and assembling the required bill of materials.
+              </p>
+            </section>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="case-study-sidebar">
+            <div class="tech-spec-panel">
+              <div class="spec-header">
+                <span>PROJECT_SPECS</span>
+                <span class="amber mono">ARGUS</span>
+              </div>
+              <div class="spec-body">
+                <div class="spec-row">
+                  <span class="spec-key">PRIMARY TECH</span>
+                  <span class="spec-val">Python, AprilTags, OpenCV</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">FIRMWARE</span>
+                  <span class="spec-val">C++ / MicroPython on ESP32</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">TELEMETRY</span>
+                  <span class="spec-val">ESP-NOW / UDP Sockets</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">STATUS</span>
+                  <span class="spec-val" style="color: var(--accent-amber);">Concept / Architecture</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">CODEBASE</span>
+                  <span class="spec-val" style="color: var(--text-muted);">Research notes</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="../index.html#projects" class="btn btn-secondary" style="width: 100%;">
+              &larr; Back to All Projects
+            </a>
+          </aside>
+
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-brand">ISHANT.EXE // DEVELOPER IN PROGRESS</span>
+      <span class="footer-note mono">exit 0</span>
+    </div>
+  </footer>
+
+</body>
+</html>

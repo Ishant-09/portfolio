@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GestureOS // Project 02 — Ishant Phadatare</title>
+  <meta name="description" content="GestureOS: An experimental concept exploring computer control and spatial input through hand gestures and computer vision.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <!-- Ambient Energy Field -->
+  <div class="energy-field-container" aria-hidden="true">
+    <div class="energy-auras">
+      <div class="energy-aura aura-cyan"></div>
+      <div class="energy-aura aura-lime"></div>
+    </div>
+    <div class="energy-grid-drift"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="../index.html#projects" class="site-logo">
+        <span class="accent mono">&lt;</span> BACK TO LAB // ISHANT.EXE
+      </a>
+      <div class="status-pill">
+        <span class="status-dot" style="background-color: var(--accent-cyan); box-shadow: 0 0 8px var(--accent-cyan);"></span>
+        <span>STATUS: EXPLORATION</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article class="case-study-hero">
+      <div class="container">
+        
+        <div class="breadcrumb">
+          <a href="../index.html">HOME</a>
+          <span>/</span>
+          <a href="../index.html#projects">PROJECTS</a>
+          <span>/</span>
+          <span class="cyan">GESTUREOS</span>
+        </div>
+
+        <span class="section-label" style="color: var(--accent-cyan); border-color: rgba(90, 228, 232, 0.3); background-color: var(--accent-cyan-dim);">PROJECT 02 // VISION &amp; HCI</span>
+        <h1 class="hero-title" style="margin-top: 12px; margin-bottom: 8px;">GestureOS</h1>
+        <p class="section-subtitle">
+          Investigating touchless spatial human-computer interaction using OpenCV frame capture and MediaPipe hand landmark tracking.
+        </p>
+
+        <div class="case-study-grid">
+          
+          <div class="case-study-main">
+            <section class="case-study-section">
+              <h3>Problem &amp; Motivation</h3>
+              <p>
+                Standard computer interactions rely heavily on physical mice, trackpads, and keyboards. While precise, there are scenarios—such as displaying slides during a presentation, browsing recipes with dirty hands in a kitchen, or accessibility setups—where touchless spatial gestures provide an ergonomic alternative.
+              </p>
+              <p>
+                GestureOS is an exploration into how modern computer vision algorithms can translate webcam video frames into discrete, noise-filtered OS virtual inputs without requiring specialized depth cameras or wearable sensors.
+              </p>
+            </section>
+
+            <section class="case-study-section">
+              <h3>Technical Architecture</h3>
+              <p>
+                The pipeline operates sequentially on incoming video streams:
+              </p>
+              <ul style="padding-left: 20px; color: var(--text-secondary); margin-bottom: 16px; line-height: 1.8;">
+                <li><strong style="color: var(--text-primary);">Frame Acquisition:</strong> OpenCV captures frames from the default webcam at 30 FPS, converts the BGR color space to RGB, and flips horizontally for mirror intuition.</li>
+                <li><strong style="color: var(--text-primary);">Landmark Extraction:</strong> MediaPipe Hands extracts 21 three-dimensional landmark points (X, Y, Z normalized coordinates) corresponding to knuckle joints, wrists, and fingertips.</li>
+                <li><strong style="color: var(--text-primary);">Gesture Classification &amp; Smoothing:</strong> Calculating Euclidean distances between index finger tip (landmark 8) and thumb tip (landmark 4). Applying an Exponential Moving Average (EMA) filter to dampen jitter before dispatching clicks.</li>
+              </ul>
+
+              <div class="code-snippet">
+<pre># Conceptual pipeline: Landmark Euclidean distance trigger
+import math
+
+def calculate_pinch_distance(p1, p2, width, height) -> float:
+    # Scale normalized coordinates to actual pixel space
+    x1, y1 = int(p1.x * width), int(p1.y * height)
+    x2, y2 = int(p2.x * width), int(p2.y * height)
+    # Euclidean distance
+    return math.hypot(x2 - x1, y2 - y1)
+
+# Threshold comparison: distance < 30px indicates a pinch gesture</pre>
+              </div>
+            </section>
+
+            <section class="case-study-section">
+              <h3>What I'm Learning</h3>
+              <p>
+                1. <strong>Real-time Latency:</strong> Frame processing must stay under ~33 milliseconds to maintain a responsive 30 FPS tracking experience.
+              </p>
+              <p>
+                2. <strong>Coordinate Normalization:</strong> Mapping camera sensor coordinates to desktop screen resolutions while accounting for aspect ratios and dead-zones.
+              </p>
+              <p>
+                3. <strong>Noise &amp; Jitter Suppression:</strong> Raw computer vision landmark coordinates fluctuate naturally due to lighting noise; software smoothing is mandatory to prevent accidental clicks.
+              </p>
+            </section>
+
+            <section class="case-study-section">
+              <h3>Current Status</h3>
+              <p>
+                This is an exploratory research project. Basic landmark extraction and pinch detection work reliably in controlled indoor lighting. Current research focuses on multi-gesture differentiation (e.g. scroll vs. drag).
+              </p>
+            </section>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="case-study-sidebar">
+            <div class="tech-spec-panel">
+              <div class="spec-header">
+                <span>PROJECT_SPECS</span>
+                <span class="cyan mono">GESTUREOS</span>
+              </div>
+              <div class="spec-body">
+                <div class="spec-row">
+                  <span class="spec-key">LANGUAGE</span>
+                  <span class="spec-val">Python 3.x</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">FRAMEWORKS</span>
+                  <span class="spec-val">OpenCV, MediaPipe</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">HARDWARE</span>
+                  <span class="spec-val">Standard USB / Built-in Webcam</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">PHASE</span>
+                  <span class="spec-val" style="color: var(--accent-cyan);">Exploration / Prototype</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">REPOSITORY</span>
+                  <span class="spec-val" style="color: var(--text-muted);">Lab experiment</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="../index.html#projects" class="btn btn-secondary" style="width: 100%;">
+              &larr; Back to All Projects
+            </a>
+          </aside>
+
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-brand">ISHANT.EXE // DEVELOPER IN PROGRESS</span>
+      <span class="footer-note mono">exit 0</span>
+    </div>
+  </footer>
+
+</body>
+</html>

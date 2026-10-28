@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GuildUp // Project 04 — Ishant Phadatare</title>
+  <meta name="description" content="GuildUp: A collaborative learning platform concept designed around shared technical quests, study squads, and learning accountability.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <!-- Ambient Energy Field -->
+  <div class="energy-field-container" aria-hidden="true">
+    <div class="energy-auras">
+      <div class="energy-aura aura-lime"></div>
+      <div class="energy-aura aura-cyan"></div>
+    </div>
+    <div class="energy-grid-drift"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="../index.html#projects" class="site-logo">
+        <span class="accent mono">&lt;</span> BACK TO LAB // ISHANT.EXE
+      </a>
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        <span>STATUS: EXPLORATION</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article class="case-study-hero">
+      <div class="container">
+        
+        <div class="breadcrumb">
+          <a href="../index.html">HOME</a>
+          <span>/</span>
+          <a href="../index.html#projects">PROJECTS</a>
+          <span>/</span>
+          <span class="accent">GUILDUP</span>
+        </div>
+
+        <span class="section-label">PROJECT 04 // COLLABORATIVE ARCHITECTURE</span>
+        <h1 class="hero-title" style="margin-top: 12px; margin-bottom: 8px;">GuildUp</h1>
+        <p class="section-subtitle">
+          Exploring software models for structured peer accountability, collaborative quests, and anti-isolation in computer science self-learning.
+        </p>
+
+        <div class="case-study-grid">
+          
+          <div class="case-study-main">
+            <section class="case-study-section">
+              <h3>Problem &amp; Motivation</h3>
+              <p>
+                Self-directed learning in technical disciplines (learning Linux, computer networks, algorithms, or systems programming) suffers from an extremely high abandonment rate. Students often encounter isolated roadblocks, succumb to "tutorial hell", or lose momentum without external structure.
+              </p>
+              <p>
+                GuildUp is a concept for a lightweight web-based coordination space where small groups (squads of 3-5 students) commit to weekly technical sprints with shared deliverables rather than passive video consumption.
+              </p>
+            </section>
+
+            <section class="case-study-section">
+              <h3>Core Interaction Principles</h3>
+              <p>
+                Unlike generic chat platforms that become noisy message sinks, GuildUp structures collaboration around discrete engineering milestones:
+              </p>
+              <ul style="padding-left: 20px; color: var(--text-secondary); margin-bottom: 16px; line-height: 1.8;">
+                <li><strong style="color: var(--text-primary);">Micro-Quests:</strong> Breaking large subjects (e.g. "Build an HTTP parser in Python") into testable sub-challenges with explicit acceptance criteria.</li>
+                <li><strong style="color: var(--text-primary);">Proof-of-Work Verification:</strong> Requiring small verifiable outputs (CLI run logs, screenshot diffs, or git commits) to mark quest steps complete.</li>
+                <li><strong style="color: var(--text-primary);">Squad Synchronization:</strong> A shared sprint dashboard where inactive members or blocked teammates can be flagged and assisted before the sprint deadline.</li>
+              </ul>
+
+              <div class="code-snippet">
+<pre># Conceptual schema design for a GuildUp Quest Entity
+{
+  "quest_id": "QUEST-NET-01",
+  "title": "Raw Socket Packet Sniffer",
+  "domain": "Networking / Python",
+  "milestones": [
+    { "step": 1, "task": "Create raw AF_INET socket", "proof_type": "code" },
+    { "step": 2, "task": "Unpack IPv4 20-byte header with struct.unpack", "proof_type": "log" },
+    { "step": 3, "task": "Log source and destination IP addresses", "proof_type": "output" }
+  ],
+  "squad_size_limit": 4,
+  "sprint_duration_days": 7
+}</pre>
+              </div>
+            </section>
+
+            <section class="case-study-section">
+              <h3>What I'm Learning</h3>
+              <p>
+                1. <strong>System Design &amp; Information Flow:</strong> Structuring data models to minimize user cognitive overhead while maximizing accountability feedback loops.
+              </p>
+              <p>
+                2. <strong>State Machines in Web Apps:</strong> Modeling sprint states (Drafting &rarr; Active &rarr; Review &rarr; Completed &rarr; Retrospective).
+              </p>
+              <p>
+                3. <strong>Building for Purposeful Communities:</strong> Understanding why many social learning apps fail by encouraging passive scrolling over active problem-solving.
+              </p>
+            </section>
+
+            <section class="case-study-section">
+              <h3>Current Status</h3>
+              <p>
+                The project is in the conceptual exploration and information architecture phase. Initial wireframes and entity relationship diagrams are being drafted.
+              </p>
+            </section>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="case-study-sidebar">
+            <div class="tech-spec-panel">
+              <div class="spec-header">
+                <span>PROJECT_SPECS</span>
+                <span class="accent mono">GUILDUP</span>
+              </div>
+              <div class="spec-body">
+                <div class="spec-row">
+                  <span class="spec-key">DOMAIN</span>
+                  <span class="spec-val">Collaborative Web Platform</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">CONCEPTS</span>
+                  <span class="spec-val">Information Architecture, State Design</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">FOCUS</span>
+                  <span class="spec-val">Peer Accountability Loops</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">STATUS</span>
+                  <span class="spec-val active-tag">Exploration &amp; Wireframing</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">REPOSITORY</span>
+                  <span class="spec-val" style="color: var(--text-muted);">Concept notes</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="../index.html#projects" class="btn btn-secondary" style="width: 100%;">
+              &larr; Back to All Projects
+            </a>
+          </aside>
+
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-brand">ISHANT.EXE // DEVELOPER IN PROGRESS</span>
+      <span class="footer-note mono">exit 0</span>
+    </div>
+  </footer>
+
+</body>
+</html>
